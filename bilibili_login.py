@@ -51,7 +51,7 @@ def recover_image(image,location_list):
     Returns:
        还原过后的图像
     """
-    new_im = Image.new('RGB', (312,116))
+    new_im = Image.new('RGB', (260,116))
     im_list_upper = []  # 上半部分图像
     im_list_down = []   # 下半部分图像
     # 图像坐标系统为横轴左边为0，纵轴上面为0
@@ -88,7 +88,7 @@ def get_diff_x(image1,image2):
     Returns:
         x_offset
     """
-    for x in range(0, 312):
+    for x in range(0, 260):
         for y in range(0, 116):
             if not __is_similar(image1, image2, x, y):
                 return x
@@ -171,8 +171,8 @@ def logging(username,password):
         else:
             break
         
-username = '15827365779'
-password = 'ly980620..'
+username = '*********'
+password = '*********'
 
 driver = webdriver.Chrome()
 driver.set_page_load_timeout(20)
